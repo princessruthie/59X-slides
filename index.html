@@ -68,7 +68,7 @@
 					<li class="fragment">cloud, GUI-local, local</li>
 					<li class="fragment">GitHub.com, GitHub desktop, git</li>
 					<li class="fragment">Other options exist for cloud (GitLab, BitBucket) and gui(often included in IDEs like CLion). </li>
-					<li>GitHub is the leader and GH Desktop is their product. Also Atom.</li>
+					<li class="fragment">GitHub is the leader and GH Desktop is their product. Also Atom.</li>
 				</ul>
 						</section>
 			<section>
@@ -105,9 +105,9 @@
 			<section>
 				<h1>Now</h1>
 				<ol>
-					<li>get a GitHub login</li>
-					<li>make your own repo</li>
-					<li>make a changes, commit with a helpful message</li>
+					<li class="fragment">get a GitHub login</li>
+					<li class="fragment">make your own repo</li>
+					<li class="fragment">make changes, commit with a helpful message</li>
 				</ol>
 			</section>
 			<section>
@@ -134,9 +134,9 @@
 			<section>
 				<h1>Now</h1>
 				<ol>
-					<li>fork my (or your team) repo https://github.com/princessruthie/hackathon-project</li>
-					<li>commit a change</li>
-					<li>submit a pull request</li>
+					<li class="fragment">fork my (or your team) repo https://github.com/princessruthie/hackathon-project</li>
+					<li class="fragment">commit a change</li>
+					<li class="fragment">submit a pull request</li>
 				</ol>
 			</section>
 			<section id="gh-only">
@@ -179,11 +179,11 @@
 			<section>
 				<h1>Now</h1>
 				<ol>
-					<li>Download GH Desktop</li>
-					<li>Use [file-> clone repository] to clone your repo (will add credentials)</li>
-					<li>Find the readme on your filesystem and make an edit</li>
-					<li>Commit the edit</li>
-					<li>Push the change</li>
+					<li  class="fragment">Download GH Desktop</li>
+					<li  class="fragment">Use [file-> clone repository] to clone your repo (will add credentials)</li>
+					<li  class="fragment">Find the readme on your filesystem and make an edit</li>
+					<li  class="fragment">Commit the edit</li>
+					<li  class="fragment">Push the change</li>
 				</ol>
 			</section>
 
@@ -200,8 +200,8 @@
 			<section>
 				<h1>Now</h1>
 				<ol>
-					<li>check to see if you have git by typing: git status</li>
-					<li>if command not found, download it https://git-scm.com/downloads</li>
+					<li class="fragment">check to see if you have git by typing: git status</li>
+					<li class="fragment">if command not found, download it https://git-scm.com/downloads</li>
 				</ol>
 			</section>
 			<section>
@@ -209,8 +209,8 @@
 				<ul>
 					<li class="fragment">git uses a sort of two-step. You have to
 						<ol>
-							<li>add the files </li>
-							<li>commit</li>
+							<li class="fragment">add the files </li>
+							<li class="fragment">commit</li>
 						</ol>
 					<li class="fragment">When you add a file, it's now staged (in your cart). Then you can commit(buy).</li>
 					<li class="fragment">Any changes that aren't added before the commit are kinda left in your 'wishlist'.</li>
@@ -235,18 +235,21 @@
 			<section>
 				<h1>Now</h1>
 				<ol>
-					<li>Clone your repo</li>
-					<li>read the log</li>
-					<li>get the status</li>
-					<li>make a change and stage used 'add'</li>
-					<li>commit the change with a helpful message</li>
+					<li class="fragment"> class="fragment" repo</li>
+					<li class="fragment">read the log</li>
+					<li class="fragment">get the status</li>
+					<li class="fragment">make a change and stage used 'add'</li>
+					<li class="fragment">commit the change with a helpful message</li>
 				</ol>
 			</section>
 			<section>
 				<h1>Undoing stuff</h1>
-				<p>You can do this by accident. Edit a file, save but don't commit.</p>
-				<p>git checkout [name of a file that you've changed]</p>
-				<p>boom. your changes all sad and gone.</p>
+
+				<ol>
+					<li class="fragment">git checkout [id of the old commit]</li>
+					<li class="fragment">git checkout fe23b9975956ca6ba4040e57f19fc8d33576d1b2</li>
+					<li class="fragment">to get the id, run git log</li>
+				</ol>
 
 			</section>
 			<section>
@@ -257,21 +260,43 @@
 					Use a .ignore file to keep these files safe/local.
 				</p>
 				<ul>
-					<li>passwords</li>
-					<li>keys</li>
-					<li>IDE config files</li>
-					<li>lets do our own and then </li>
-					<li>check out <a href="https://github.com/github/gitignore"></a></li>
+					<li class="fragment">passwords</li>
+					<li class="fragment">keys</li>
+					<li class="fragment">IDE config files</li>
+					<li class="fragment">lets do our own and then </li>
+					<li class="fragment">check out <a href="https://github.com/github/gitignore"></a></li>
 				</ul>
 			</section>
 			<section>
 				<h1>Things to know</h1>
 				<ul>
-					<li>git tracks CHANGES. Can think like a bank account where to undo, you just change signs and rerun transactions in reverse order to get to a previous balance.</li>
-					<li>Hacktoberfest</li>
-					<li>Expressive commit histories</li>
-					<li>Even though git looks like a log, everything can be faked or overwritten</li>
+
+					<li class="fragment">git tracks CHANGES. Can think like a bank account where to undo, you just change signs and rerun transactions in reverse order to get to a previous balance.</li>
+					<li class="fragment">Hacktoberfest</li>
+					<li class="fragment">Expressive commit histories</li>
+					<li class="fragment">Even though git looks like a log, everything can be faked or overwritten</li>
 				</ul>
+			</section>
+			<section>
+				<h1>Do we have time to `git` into branches?</h1>
+				<ul>
+					<li class="fragment">You can do everything on one branch. But you shouldn't.</li>
+					<li class="fragment">You can instead checkout your a branch, do several commits untiil you have a nice feature, then merge it back</li>
+					<li class="fragment">Keep the master branch only for "ready" code. Whatever that means to you.</li>
+					<li class="fragment">On GH, if you have a branch called gh-pages, GH will serve the files like a website</li>
+				</ul>
+			</section>
+			<section>
+				<h1>Now</h1>
+				<ol>
+					<li class="fragment">git checkout -b name-of-new-branch</li>
+					<li class="fragment">git branch (this tells you the names of all your branches)</li>
+					<li class="fragment">git checkout master (no -b because master already exists)</li>
+				</ol>
+			</section>
+			<section>
+				<h1>What?</h1>
+				<p>I can't believe we made.</p>
 			</section>
 		</div>
 	</div>
