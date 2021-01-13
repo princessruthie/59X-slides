@@ -2,6 +2,8 @@ These slides can be viewed in your browser at https://princessruthie.github.io/5
 
 Are they riddled with mistake? Make a PR. Thanks!
 
+***Note***: GitHub has updated its default branch from ~~master~~ to main. You can read more about [gh renaming](https://github.com/github/renaming). This document is now updated to reflect that language.
+If you have git 2.28 or later, you can update your local git to always initialize repos with a main branch: `git config --global init.defaultBranch main`. Documentation at [default branch](https://git-scm.com/docs/git-config/2.28.0#Documentation/git-config.txt-initdefaultBranch).
 
 # Expectations:
 
@@ -59,14 +61,14 @@ A branch is a pointer to a commit.
 ## Branching for real
 Only read this after you accept the Branching section above. Branching is a way of making independent changes to code. You want to work on the website but don't want to put your changes into production, for example. You make a branch with `git branch cool-feature` or whatever you're going to call it. What have you done? You've made a branch. What's a branch? Right, you've made a pointer to a commit.
 
-Now get your HEAD in the game. HEAD is a pointer to a branch. You can have a ton of different branches but there is only one HEAD. Question, if you only have one branch called master, where does HEAD point? (Answer aloud to yourself.)
+Now get your HEAD in the game. HEAD is a pointer to a branch. You can have a ton of different branches but there is only one HEAD. Question, if you only have one branch called ~~master~~ main, where does HEAD point? (Answer aloud to yourself.)
 
 Again: HEAD points to a branch and a branch points to a commit. When you branch, you create a new pointer to a commit. To change to that branch, you have to checkout: `git checkout cool-feature`. Stop and say to yourself what you think is happening. Make a sentence using the word HEAD, point and branch. "When you checkout..."
 
 Once you're on a branch, changes there are only on the branch unless you make an explicit effort to bring them over. As you make commits on a branch, `cool-feature` will continue to point to the most recent commit. HEAD will continue to just point to `cool-feature`. To bring changes FROM one branch INTO another, you can merge.
 
 ## Merging
-Changes on different branches know nothing of one another unless you merge. You MERGE INTO the currently checked out branch. So if you have a master branch and a `cool-feature` branch and the master branch has a security update, which one do you checkout? If you're done developing on the `cool-feature` branch and want to bring the changes into production, which branch do you checkout?
+Changes on different branches know nothing of one another unless you merge. You MERGE INTO the currently checked out branch. So if you have a ~~master~~ main branch and a `cool-feature` branch and the ~~master~~ main branch has a security update, which one do you checkout? If you're done developing on the `cool-feature` branch and want to bring the changes into production, which branch do you checkout?
 
 1. `git checkout branch-to-merge-into` then
 
@@ -107,13 +109,13 @@ There are so many ways to flow your work. So many. Here's one.
 1. As it is, only A can push to the repo. It's a hackathon, be wild. A can give everyone push permissions. It's under settings ---> manage access.
 1. Team members A through Z all clone the repo.
 1. Members make their changes. Push/pull them. Resolve conflicts. Build character and team spirit. Seriously.
-1. Going forward, each member can branch from master and make their changes in peace. When an entire logical block of code is done, merge into master and push. You'll still get a few conflicts here and there but you did the previous step and can handle it.
-    1. `git checkout master && git pull` # start with latest version of master
+1. Going forward, each member can branch from ~~master~~ main and make their changes in peace. When an entire logical block of code is done, merge into ~~master~~ main and push. You'll still get a few conflicts here and there but you did the previous step and can handle it.
+    1. `git checkout ~~master~~ main && git pull` # start with latest version of ~~master~~ main
     1. `git checkout -b feat-5` This is where you'll be doing work
     1. ` git push --set-upstream origin feat-5` only need to do it this way once.
     1. use the lifecycle as above and push regularly.
-    1. When you've finished a solid feature, pull master for latest teammate changes, merge feat-5 into master and push it up. Start on the next feature.
-        1. `git checkout master`
+    1. When you've finished a solid feature, pull ~~master~~ main for latest teammate changes, merge feat-5 into ~~master~~ main and push it up. Start on the next feature.
+        1. ~~`git checkout master`~~ `git checkout main`
         1. `git pull`
         1. `git merge feat-5`
         1. `git push`
