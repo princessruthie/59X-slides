@@ -1,4 +1,4 @@
-These slides can be viewed in your browser at https://princessruthie.github.io/59X-slides/.
+These slides can be viewed in your browser at https://princessruthie.github.io/59X-slides/index.html.
 
 Are they riddled with mistake? Make a PR. Thanks!
 
